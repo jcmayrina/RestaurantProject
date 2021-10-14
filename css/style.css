@@ -11,7 +11,6 @@ gray:       #9d9b9a
 */
 /* NAVIGATION */
 .top-nav {
-  overflow: hidden;
   padding: 25px 0px 10px;
   display: flex;
   align-items: center;
@@ -91,7 +90,14 @@ gray:       #9d9b9a
 .carousel-img .bx {
   color: #000;
   font-size: 150px;
-  overflow: hidden;
+}
+.carousel-item .carousel-caption p {
+  color: rgb(177, 177, 177);
+  text-decoration: none;
+}
+.carousel-item .carousel-caption p a {
+  color: #88d9ff;
+  text-decoration: none;
 }
 /* POPULAR SECTION */
 .popular .header {
@@ -125,6 +131,15 @@ gray:       #9d9b9a
   width: 100%;
 }
 
+.cards p {
+  color: #fff;
+  margin-left: 15px;
+  margin-top: -25px;
+  font-size: 12px;
+}
+.cards p a {
+  color: rgb(128, 229, 255);
+}
 .overlay {
   border-radius: 15px;
   position: absolute;
@@ -291,6 +306,15 @@ gray:       #9d9b9a
   height: 100%;
   width: 100%;
 }
+.left p {
+  color: #fff;
+  margin-left: 5px;
+  margin-top: -20px;
+  font-size: 12px;
+}
+.left p a {
+  color: rgb(128, 229, 255);
+}
 .right {
   margin: 20px 0 20px 30px;
 }
@@ -344,15 +368,15 @@ gray:       #9d9b9a
 }
 .single-box {
   position: relative;
-  max-width: 35%;
+  max-width: 50%;
 }
 .review-cont {
   color: #715846;
   font-weight: 600;
   font-style: italic;
   text-align: center;
-  min-height: 10vh;
   font-size: 18px;
+  min-height: 8vh;
 }
 .review-link {
   color: #fff;
@@ -360,6 +384,7 @@ gray:       #9d9b9a
   font-style: italic;
   text-align: center;
   margin-bottom: 5%;
+  margin-top: 15px;
 }
 .review-link a {
   color: #fff;
