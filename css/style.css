@@ -1,0 +1,159 @@
+/* 
+Fonts:
+Roboto: font-family: 'Roboto', sans-serif;
+Noto Sans Mono: font-family: 'Noto Sans Mono', monospace;
+Andada Pro: font-family: 'Andada Pro', serif;
+Colors:
+brownish:   #715846
+semi-brown: #887969
+orange:     #e09721
+gray:       #9d9b9a
+*/
+.top-nav {
+  padding: 25px 0px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.logo .header {
+  color: #715846;
+  font-family: "Noto Sans Mono", monospace;
+  font-size: 35px;
+}
+.nav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+.nav-item a {
+  text-decoration: none;
+  color: #887969;
+  font-family: "Roboto", sans-serif;
+  padding: 15px 15px 3px 15px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.nav-item .active {
+  border-bottom: #ea215a 0.125em solid;
+}
+.navbutt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user-but {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user-but a {
+  text-decoration: none;
+  margin-right: 15px;
+  background-color: #e09721;
+  color: #fff;
+  border-radius: 3px;
+  padding: 3px 10px 3px 10px;
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+}
+.search-cont button {
+  color: #9d9b9a;
+  vertical-align: middle;
+  margin-top: -0.125em;
+  border: none;
+  background: none;
+}
+.search-cont input {
+  color: #9d9b9a;
+  border: none;
+  background: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+}
+.bx {
+  font-size: 15px;
+}
+.carousel-inner .carousel-item {
+  max-height: 90vh;
+}
+.carousel-item img {
+  object-fit: cover;
+  object-position: center;
+  height: 70vh;
+  width: 100vw;
+}
+.carousel-img .bx {
+  color: #fff;
+  font-size: 150px;
+}
+.popular .header {
+  color: #715846;
+  margin-top: 5%;
+  font-family: "Andada Pro", serif;
+  text-align: center;
+  word-spacing: 10px;
+}
+.card-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.cards {
+  border-radius: 15px;
+  margin: 15px;
+  position: relative;
+  width: 450px;
+  height: 600px;
+}
+
+.cards img {
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  border-radius: 15px;
+  display: block;
+  width: 100%;
+}
+
+.overlay {
+  border-radius: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(58, 58, 58, 0.781);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+.overlay:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.overlay .title {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  font-family: "Andada Pro", serif;
+}
+
+.overlay .content {
+  margin: 20px 50px 0 50px;
+}
+
+.overlay .content h4 {
+  font-weight: 100;
+  font-size: 25px;
+  font-family: "Andada Pro", serif;
+  font-style: italic;
+}
