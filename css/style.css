@@ -139,21 +139,66 @@ gray:       #9d9b9a
   cursor: pointer;
   opacity: 1;
 }
-
-.overlay .title {
+.overlay .title h1 {
   text-align: center;
-  font-size: 2em;
+  font-size: 3em;
   font-weight: bold;
   font-family: "Andada Pro", serif;
 }
-
 .overlay .content {
   margin: 20px 50px 0 50px;
 }
-
 .overlay .content h4 {
   font-weight: 100;
   font-size: 25px;
   font-family: "Andada Pro", serif;
   font-style: italic;
+}
+@media only screen and (max-width: 1920px) {
+  .card-wrapper {
+    width: 100%;
+  }
+  .overlay .content h4 .bx {
+    font-size: 35px;
+  }
+}
+@media only screen and (max-width: 1500px) {
+  .cards {
+    width: 30%;
+  }
+  .cards img {
+    height: 80%;
+  }
+  .overlay {
+    height: 80%;
+  }
+  .overlay .title h1 {
+    font-size: 2.5em;
+  }
+  .overlay .content h4 {
+    font-size: 20px;
+  }
+  .overlay .content h4 .bx {
+    font-size: 25px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .cards {
+    width: 27%;
+  }
+  .cards img {
+    height: 60%;
+  }
+  .overlay {
+    height: 60%;
+  }
+  .overlay .title h1 {
+    font-size: 1.5em;
+  }
+  .overlay .content h4 {
+    font-size: 10px;
+  }
+  .overlay .content h4 .bx {
+    font-size: 15px;
+  }
 }
