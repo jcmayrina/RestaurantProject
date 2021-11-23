@@ -1,0 +1,245 @@
+/* 
+Fonts:
+Roboto: font-family: 'Roboto', sans-serif;
+Noto Sans Mono: font-family: 'Noto Sans Mono', monospace;
+Andada Pro: font-family: 'Andada Pro', serif;
+Colors:
+brownish:   #715846
+semi-brown: #887969
+orange:     #e09721
+gray:       #9d9b9a
+*/
+
+body,
+html {
+  height: 100%;
+}
+
+/*NAVIGATION*/
+.top-nav {
+  padding: 25px 0px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.logo .header {
+  color: #715846;
+  font-family: "Noto Sans Mono", monospace;
+  font-size: 35px;
+}
+.nav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+.nav-item a {
+  text-decoration: none;
+  color: #887969;
+  font-family: "Roboto", sans-serif;
+  padding: 15px 15px 3px 15px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.nav-item .active {
+  border-bottom: #ea215a 0.125em solid;
+}
+.navbutt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user-but {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user-but a {
+  text-decoration: none;
+  margin-right: 15px;
+  background-color: #e09721;
+  color: #fff;
+  border-radius: 3px;
+  padding: 3px 10px 3px 10px;
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+}
+.search-cont button {
+  color: #9d9b9a;
+  vertical-align: middle;
+  margin-top: -0.125em;
+  border: none;
+  background: none;
+}
+.search-cont input {
+  color: #9d9b9a;
+  border: none;
+  background: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+}
+.bx {
+  font-size: 15px;
+}
+
+.cover-content {
+  background-image: url("../images/cover\ \(2\).png");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.first-section,
+.second-section {
+  margin-top: 150px;
+}
+
+.categories-content {
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.category-title,
+.description {
+  font-family: "Andada Pro", serif;
+  color: #715846;
+  font-weight: lighter;
+}
+
+span.text {
+  width: 85%;
+  font-style: italic;
+}
+
+.grid-container {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: auto auto auto;
+  grid-gap: 60px;
+  grid-row-gap: 10%;
+  width: 80%;
+  height: 1000px;
+
+  margin: 0 auto;
+}
+
+.grid-item {
+  height: 430px;
+  width: 270px;
+}
+
+img {
+  width: 270px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.grid-item:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  cursor: pointer;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.food-title {
+  font-family: "Roboto", sans-serif;
+  color: #715846;
+  font-weight: bold;
+}
+
+.authors {
+  font-family: "Roboto", sans-serif;
+  color: #715846;
+  font-size: 15px;
+}
+
+.food-content {
+  text-align: left;
+  padding: 10px;
+}
+
+.fa {
+  font-size: 15px;
+}
+
+.checked {
+  color: #e09721;
+}
+
+.no-of-ratings {
+  text-align: right;
+  font-family: "Roboto", sans-serif;
+  color: #715846;
+  font-size: 15px;
+  font-style: italic;
+}
+
+footer {
+  padding: 5px 0 5px 0;
+  background: rgb(216, 155, 22);
+  color: #fff;
+  margin-top: 500px;
+  text-align: center;
+}
+
+footer .soc-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+footer .soc-link a {
+  padding: 0 5px 0 5px;
+}
+
+footer p {
+  font-family: "Noto Sans Mono", monospace;
+  margin-top: 5px;
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content a {
+  color: #887969;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+}
+
+.dropdown-content {
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.dropdown-content a:hover {
+  background-color: rgb(248, 248, 248);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}

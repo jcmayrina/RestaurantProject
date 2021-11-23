@@ -77,6 +77,43 @@ gray:       #9d9b9a
 .bx {
   font-size: 15px;
 }
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content a {
+  color: #887969;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+}
+
+.dropdown-content {
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.dropdown-content a:hover {
+  background-color: rgb(248, 248, 248);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 /* IMAGE HEADER AND SLIDER */
 .carousel-inner .carousel-item {
   max-height: 90vh;

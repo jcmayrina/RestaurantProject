@@ -1,0 +1,177 @@
+
+body {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin: 0 auto;
+ height: 100vh;
+ background-color: #f1f1f1;
+}
+
+#signincontainer{
+    border: none;
+    width: 50%;
+    height: 67%;
+    display: flex;
+    box-shadow: 0 0 10px 2px #0505051a;
+}
+
+#firstpart{
+    width: 45%;
+    border: none;
+    background-color: #e09721;
+    color: white;
+    padding-top:6%;
+    padding-bottom:2%;
+    padding-left:4%;
+    padding-right:4%;
+    text-align: center;
+}
+
+#secondpart{
+    width:55%;
+    border: none;
+    background-color: white;
+
+    padding-top:3%;
+    padding-left: 10%;
+    padding-right: 10%;
+
+    color:#887969;
+}
+
+#phoodie{
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+}
+
+#signintext{
+    text-align: center;
+   
+    font-weight: bold;
+    font-family: 'Noto Sans Mono', monospace;
+}
+
+#signup{
+    text-decoration: none;  
+    background-color: #f3f4f7;  
+    border-radius: 5px;  
+    border:none;
+    color: #715846;  
+    padding: 8px 8px;  
+    width:40%
+}
+
+#signup:hover{
+    opacity: 0.8;
+	color:#887969;
+}
+
+#dummylogo{
+    height:60px;
+    width:70px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input:focus{
+    outline: none;
+    background:#2a405b21;
+}
+
+input[type=password] {  
+   background-color: white;  
+
+   border-bottom: 1px solid #887969;;
+   border-top:none;
+   border-right: none;
+   border-left:none;
+   width: 100%;  
+   height: 10%;
+
+   padding-left:20px;
+} 
+input[type=re-enterpassword] {  
+   background-color: white;  
+
+   border-bottom: 1px solid #887969;;
+   border-top:none;
+   border-right: none;
+   border-left:none;
+   width: 100%;  
+   height: 10%;
+
+   padding-left:20px;
+} 
+input[type=email] {  
+   background-color: white;  
+
+   border-bottom: 1px solid #887969;;
+   border-top:none;
+   border-right: none;
+   border-left:none;
+   width: 100%;  
+   height: 10%;
+   padding-left:20px;
+} 
+input[type=text] {  
+    background-color: white;  
+ 
+    border-bottom: 1px solid#887969;;
+    border-top:none;
+    border-right: none;
+    border-left:none;
+    width: 100%;  
+    height: 50% ;
+    padding-left:20px;
+ } 
+
+ 
+
+ #icon{
+     font-size: 20px;
+     position: absolute;
+ }
+
+ .signinbutton{
+    text-decoration: none;  
+    background-color: #e09721;  
+    border-radius: 5px;  
+    border:none;
+    color: white;  
+    padding: 8px 8px;  
+    width:30%;
+}
+
+.signinbutton:hover{
+    opacity: 0.8;
+	color:#887969;
+}
+
+.buttondiv{
+    text-align:center;
+}
+
+.forms{
+    display: block;  
+}
+
+#hello{
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Noto Sans Mono', monospace;
+}
+
+.p1{
+    font-family: "Roboto", sans-serif; 
+}
+#copyrights{
+    font-size: 13px;
+}
+
+.soc-link{
+    font-size: 15px;
+}

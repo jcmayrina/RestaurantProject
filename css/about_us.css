@@ -1,0 +1,277 @@
+/* 
+Fonts:
+Roboto: font-family: 'Roboto', sans-serif;
+Noto Sans Mono: font-family: 'Noto Sans Mono', monospace;
+Andada Pro: font-family: 'Andada Pro', serif;
+Colors:
+brownish:   #715846
+semi-brown: #887969
+orange:     #e09721
+gray:       #9d9b9a
+*/
+
+body,
+html {
+  height: 100%;
+}
+
+/* NAVIGATION */
+.top-nav {
+  padding: 25px 0px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.logo .header {
+  color: #715846;
+  font-family: "Noto Sans Mono", monospace;
+  font-size: 35px;
+}
+.nav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+.nav-item a {
+  text-decoration: none;
+  color: #887969;
+  font-family: "Roboto", sans-serif;
+  padding: 15px 15px 3px 15px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.nav-item .active {
+  border-bottom: #ea215a 0.125em solid;
+}
+.navbutt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user-but {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user-but a {
+  text-decoration: none;
+  margin-right: 15px;
+  background-color: #e09721;
+  color: #fff;
+  border-radius: 3px;
+  padding: 3px 10px 3px 10px;
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+}
+.search-cont button {
+  color: #9d9b9a;
+  vertical-align: middle;
+  margin-top: -0.125em;
+  border: none;
+  background: none;
+}
+.search-cont input {
+  color: #9d9b9a;
+  border: none;
+  background: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+}
+.bx {
+  font-size: 15px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content a {
+  color: #887969;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+}
+
+.dropdown-content {
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.dropdown-content a:hover {
+  background-color: rgb(248, 248, 248);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.cover {
+  background-image: url("../images/cover\ \(2\).png");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container {
+  width: 70%;
+  margin-top: 200px;
+}
+
+.content {
+  font-family: "Roboto", sans-serif;
+  color: #715846;
+}
+
+h1,
+.roles,
+h3 {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  color: #715846;
+}
+
+table {
+  width: 70%;
+  margin: 0 auto;
+}
+
+td {
+  align-items: center;
+}
+
+img {
+  margin-left: 18%;
+  height: 100px;
+  width: 100px;
+}
+
+footer {
+  background-color: #eee;
+  border: 2px solid #e09721;
+  margin-top: 200px;
+  height: 655px;
+}
+
+footer > div,
+footer > .divider {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+footer > div {
+  text-align: left;
+  width: 50%;
+  height: 655px;
+}
+
+footer > .divider {
+  font-style: normal;
+  height: 655px;
+  -webkit-box-shadow: 1px 2px 1px #ccc;
+  box-shadow: 1px 2px 1px #ccc;
+}
+
+.reachus {
+  width: 55%;
+  float: left;
+  padding-right: 150px;
+  padding-left: 100px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  background-color: white;
+  color: #e09721;
+}
+
+.emailus {
+  padding-right: 100px;
+  padding-left: 120px;
+  width: 45%;
+  color: white;
+  background-color: #e09721;
+}
+
+.message {
+  height: 60px;
+}
+
+.emailus input {
+  height: 30px;
+  width: 300px;
+  border: 1px solid #e09721;
+  border-radius: 5px;
+  margin-left: 40px;
+}
+
+.credits {
+  font-family: "Noto Sans Mono", monospace;
+  margin-top: 5px;
+  font-size: 12px;
+  margin-bottom: 0;
+}
+
+.emailus input:focus {
+  outline: none;
+}
+
+.instruction {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+}
+
+.emailus label {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  margin-top: 30px;
+  margin-left: 40px;
+}
+
+.title {
+  font-family: "Andada Pro", serif;
+  font-size: 30px;
+  margin-top: 30px;
+}
+
+.emailus button {
+  font-family: "Noto Sans Mono", monospace;
+  margin-left: 40px;
+  background-color: white;
+  color: #e09721;
+  padding: 3px 10px 3px 10px;
+  margin-bottom: 16px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: none;
+}
+
+.emailus button:hover {
+  background-color: rgb(224, 206, 206);
+  color: #e09721;
+  cursor: pointer;
+}
+
+.reachus i.bx {
+  font-size: 25px;
+}
+
+.first {
+  background-color: pink;
+}
+
+.info {
+  margin-top: 60px;
+  margin-left: 50px;
+}
