@@ -15,112 +15,8 @@ html {
   height: 100%;
 }
 
-/* NAVIGATION */
-.top-nav {
-  padding: 25px 0px 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-.logo .header {
-  color: #715846;
-  font-family: "Noto Sans Mono", monospace;
-  font-size: 35px;
-}
-.nav-list {
-  display: flex;
-  align-items: center;
-  list-style: none;
-}
-.nav-item a {
-  text-decoration: none;
-  color: #887969;
-  font-family: "Roboto", sans-serif;
-  padding: 15px 15px 3px 15px;
-  font-size: 18px;
-  font-weight: 500;
-}
-.nav-item .active {
-  border-bottom: #ea215a 0.125em solid;
-}
-.navbutt {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.user-but {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.user-but a {
-  text-decoration: none;
-  margin-right: 15px;
-  background-color: #e09721;
-  color: #fff;
-  border-radius: 3px;
-  padding: 3px 10px 3px 10px;
-  margin-bottom: 16px;
-  font-size: 18px;
-  font-family: "Roboto", sans-serif;
-}
-.search-cont button {
-  color: #9d9b9a;
-  vertical-align: middle;
-  margin-top: -0.125em;
-  border: none;
-  background: none;
-}
-.search-cont input {
-  color: #9d9b9a;
-  border: none;
-  background: none;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 15px;
-}
-.bx {
-  font-size: 15px;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  z-index: 1;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content a {
-  color: #887969;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-
-  font-family: "Roboto", sans-serif;
-  font-size: 12px;
-}
-
-.dropdown-content {
-  background-color: white;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
-
-.dropdown-content a:hover {
-  background-color: rgb(248, 248, 248);
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
 .cover {
-  background-image: url("../images/cover\ \(2\).png");
+  background-image: url("/images/cover.png");
   height: 50%;
   background-position: center;
   background-repeat: no-repeat;
@@ -128,12 +24,13 @@ html {
 }
 .container {
   width: 70%;
-  margin-top: 200px;
+  margin-top: 20px;
 }
 
 .content {
   font-family: "Roboto", sans-serif;
   color: #715846;
+  text-align: justify;
 }
 
 h1,
@@ -144,17 +41,24 @@ h3 {
   color: #715846;
 }
 
-table {
-  width: 70%;
+.team-container {
+  width: 80%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 100px;
 }
 
-td {
+.team-content-container {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
 img {
-  margin-left: 18%;
   height: 100px;
   width: 100px;
 }
@@ -208,7 +112,7 @@ footer > .divider {
   height: 60px;
 }
 
-.emailus input {
+input {
   height: 30px;
   width: 300px;
   border: 1px solid #e09721;
@@ -223,7 +127,7 @@ footer > .divider {
   margin-bottom: 0;
 }
 
-.emailus input:focus {
+input:focus {
   outline: none;
 }
 
@@ -232,7 +136,7 @@ footer > .divider {
   font-size: 15px;
 }
 
-.emailus label {
+label {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   margin-top: 30px;
@@ -245,7 +149,7 @@ footer > .divider {
   margin-top: 30px;
 }
 
-.emailus button {
+button {
   font-family: "Noto Sans Mono", monospace;
   margin-left: 40px;
   background-color: white;
@@ -257,13 +161,13 @@ footer > .divider {
   border: none;
 }
 
-.emailus button:hover {
+button:hover {
   background-color: rgb(224, 206, 206);
   color: #e09721;
   cursor: pointer;
 }
 
-.reachus i.bx {
+i.bx {
   font-size: 25px;
 }
 

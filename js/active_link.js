@@ -4,3 +4,7 @@ $(document).ready(function () {
     $(this).addClass("active");
   });
 });
+function getImage(imagename) {
+  var newimg = imagename.replace(/^.*\\/, "");
+  $("#display-image").html(newimg);
+}

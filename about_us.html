@@ -5,47 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us</title>
-    <!-- Jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <!-- Boxicons -->
-    <link
-      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Andada+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Noto+Sans+Mono:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Bootstrap -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Javascript -->
-    <script src="./js/active_link.js"></script>
-    <!-- CSS -->
-    <link rel="stylesheet" href="./css/about_us.css" />
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <link
+     href="https://fonts.googleapis.com/css2?family=Andada+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Noto+Sans+Mono:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+     rel="stylesheet"
+   />
+
+   <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet"/>
+
+   <!-- Bootstrap -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+   <link rel="stylesheet" href="./css/about_us.css" />
+   <link rel="stylesheet" href="./css/style.css" />
   </head>
+
   <body>
     <nav class="top-nav">
       <div class="logo">
@@ -63,7 +41,6 @@
         <ul class="nav-list">
           <li class="nav-item">
             <a href="index.html">HOME</a>
-            <a href="#REVIEWS">REVIEWS</a>
             <div class="dropdown">
               <a href="#MENU">MENU</a>
               <div class="dropdown-content">
@@ -75,13 +52,14 @@
                 <a href="food-categories.html">Soup</a>
               </div>
             </div>
-            <a href="about_us.html">ABOUT US</a>
+            <a href="about_us.html" class="active">ABOUT US</a>
+            
           </li>
         </ul>
       </div>
       <div class="user-but">
-        <a href="signin.html">Log-in</a>
-        <a href="signin.html">Register</a>
+        <a href="login.html">Log-in</a>
+        <a href="register.html">Register</a>
       </div>
     </nav>
     <div class="cover"></div>
@@ -97,25 +75,34 @@
     <hr width = 70%>
     <br><br>
 
-    <h1> The Team </h1>
+    <h1 style="background-color:  #e09721; padding: 10px; color: white;"> The Team </h1>
 
     <br>
-    <table>
-      <tr>
-        <td><img src = "images/atienza.png"/> <h3 style="font-size: 20px;"> Atienza </h3> <p class = roles> Role </p></td>
-        <td><img src = "images/cueto.png"/> <h3 style="font-size: 20px;"> Cueto </h3> <p class = roles> Role </p></td>
-        <td><img src = "images/gamayon.png"/> <h3 style="font-size: 20px;"> Gamayon </h3> <p class = roles> Role </p></td>
-        <td><img src = "images/mayrina.png"/> <h3 style="font-size: 20px;"> Mayrina </h3> <p class = roles> Role </p></td>
-        <td><img src = "images/sitjar.png"/> <h3 style="font-size: 20px;"> Quintans </h3> <p class = roles> Role </p> </td>
-        <td><img src = "images/vedasto.png"/> <h3 style="font-size: 20px;"> Sitjar </h3> <p class = roles> Role </p></td>
-      </tr>
-    </table>
+    <div class="team-container">
+      <div class="team-content-container">
+        <img src = "./images/atienza.png"/> <h3 style="font-size: 20px;"> Atienza </h3> <p class = roles> Role </p></td>
+      </div>
+      <div class="team-content-container">
+        <img src = "./images/cueto.png"/> <h3 style="font-size: 20px;"> Cueto </h3> <p class = roles> Role </p></td>
+      </div>  
+      <div class="team-content-container">
+        <img src = "./images/gamayon.png"/> <h3 style="font-size: 20px;"> Gamayon </h3> <p class = roles> Role </p></td>
+      </div>
+      <div class="team-content-container">
+        <img src = "./images/mayrina.png"/> <h3 style="font-size: 20px;"> Mayrina </h3> <p class = roles> Role </p></td>
+      </div>
+      <div class="team-content-container">
+        <img src = "./images/sitjar.png"/> <h3 style="font-size: 20px;"> Quintans </h3> <p class = roles> Role </p> </td>
+      </div>
+      <div class="team-content-container">
+        <img src = "./images/vedasto.png"/> <h3 style="font-size: 20px;"> Sitjar </h3> <p class = roles> Role </p></td>
+      </div>
+    </div>
     
-    <br><br><br>
 
     <footer>
       <div class="reachus">
-                <p class="title"> <i class='bx bxs-map bx-md' style="color: #white;"></i><b>REACH US</b> </p>
+                <p class="title"> <i class='bx bxs-map bx-md' style="color: white;"></i><b>REACH US</b> </p>
                 <br>
                       
                 <p class="instruction">  Please use the contact form on the right side if you have any questions or requests, concerning our website. We will respond to your message within 24 hours.</p>

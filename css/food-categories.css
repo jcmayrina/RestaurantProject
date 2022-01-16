@@ -85,25 +85,26 @@ html {
   font-size: 15px;
 }
 
-.cover-content {
+.categories-content {
   background-image: url("../images/cover\ \(2\).png");
-  height: 50%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.first-section,
-.second-section {
-  margin-top: 150px;
+  padding-top: 400px;
 }
 
 .categories-content {
   text-align: center;
-  width: 70%;
   margin: 0 auto;
 }
 
+.categories-content p {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 60%;
+}
 .category-title,
 .description {
   font-family: "Andada Pro", serif;
@@ -186,7 +187,7 @@ footer {
   padding: 5px 0 5px 0;
   background: rgb(216, 155, 22);
   color: #fff;
-  margin-top: 500px;
+  margin-top: 50px;
   text-align: center;
 }
 
