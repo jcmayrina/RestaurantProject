@@ -135,7 +135,7 @@ span.text {
   width: 270px;
 }
 
-img {
+.grid-item img {
   width: 270px;
   height: 300px;
   object-fit: cover;

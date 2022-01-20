@@ -1,0 +1,258 @@
+* {
+  box-sizing: content-box;
+}
+body {
+  margin: 0 auto;
+}
+.container-head {
+  position: relative;
+  background-color: #e09721;
+  display: flex;
+  justify-content: center;
+  height: 120px;
+  width: auto;
+}
+
+.header-content {
+  position: relative;
+  top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 190px;
+}
+
+.icon {
+  height: 150px;
+  width: 150px;
+}
+
+#username {
+  font-size: 20px;
+  margin: 0 auto;
+}
+
+.user_nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user_nav_butt {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.btn {
+  text-decoration: none;
+  color: #715846;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  padding: 10px;
+  background: transparent;
+  border: none;
+}
+
+.btn:hover {
+  text-decoration: none;
+  color: #e09721;
+  cursor: pointer;
+}
+
+.active {
+  color: #e09721;
+  border-bottom: 2px solid #e09721;
+}
+
+.container {
+  border: 1px solid rgb(209, 209, 209);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
+  height: 200px;
+  width: 75%;
+  padding: 20px;
+}
+
+.content-container {
+  border-bottom: 2px solid rgb(209, 209, 209);
+  height: 90%;
+  width: 95%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.content {
+  height: 95%;
+  width: 80%;
+}
+
+#date {
+  font-size: 15px;
+  font-weight: normal;
+}
+
+#food_title {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+#food_content {
+  font-size: 1.2em;
+}
+#image {
+  height: 150px;
+  width: 150px;
+}
+section {
+  margin-top: 190px;
+}
+
+.settings_dropdown {
+  margin-top: -150px;
+  position: relative;
+  display: inline-block;
+}
+
+.settings_dropdown_content {
+  display: none;
+  position: absolute;
+  min-width: 90px;
+  z-index: 1;
+
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.settings_dropdown_content a {
+  color: #887969;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+}
+
+.settings_dropdown_content a:hover,
+.settings_dropdown:hover {
+  background-color: rgb(248, 248, 248);
+  cursor: pointer;
+}
+
+/* Account*/
+
+.account-container label {
+  font-weight: bold;
+}
+
+.account-container {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  color: #715846;
+}
+
+.prof_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile_section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 20px;
+  padding-top: 2em;
+  padding-bottom: 3em;
+  padding-left: 4em;
+  padding-right: 4em;
+  width: 60%;
+  height: 35%;
+
+  box-shadow: rgba(10, 6, 6, 0.05) 0px 0px 0px 1px;
+  object-fit: cover;
+}
+
+.img-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 200px;
+  width: 200px;
+}
+
+.img-section img {
+  transform: scaleX(-1);
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.img-section span {
+  /*add image icon*/
+  position: absolute;
+  right: 22px;
+  bottom: 30px;
+}
+
+.img-section input {
+  position: absolute;
+  top: 12em;
+  left: 0px;
+}
+
+.prof_container .input-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  object-fit: fill;
+  max-width: 40%;
+}
+
+.input-section .input-content {
+  border-spacing: 0px 20px;
+  border-collapse: separate;
+  margin: 1em;
+}
+
+.input-section .input-content tr {
+  background-color: white;
+  box-shadow: rgba(10, 6, 6, 0.05) 0px 0px 0px 1px;
+  border: none;
+}
+
+.input-section .input-content td {
+  border: none;
+  padding: 10px;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+}
+.input-section .input-textbox {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  width: 30vh;
+}
+
+.input-textbox:focus {
+  outline: none;
+  background-color: rgb(216, 155, 22);
+}

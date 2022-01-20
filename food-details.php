@@ -42,52 +42,28 @@
       crossorigin="anonymous"
     ></script>
     <!-- Javascript -->
-    <script src="./js/active_tab.js"></script>
+    <script src="./js/active_link.js"></script>
     <!-- CSS -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="./css/food-details.css" />
+    <link rel="stylesheet" href="./css/user_accountDetails.css" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
 
   <body>
-    <nav class="top-nav">
-      <div class="logo">
-        <h1 class="header">PHoodie</h1>
-      </div>
-      <div class="search-cont">
-        <form>
-          <input type="text" name="search" placeholder="Search..." />
-          <button type="submit" class="subbut">
-            <i class="bx bx-search"></i>
-          </button>
-        </form>
-      </div>
-      <div class="navbutt">
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a href="index.html">HOME</a>
-            <div class="dropdown">
-              <a href="#MENU" class="active">MENU</a>
-              <div class="dropdown-content">
-                <a href="food-categories.html">Main Dish</a>
-                <a href="food-categories.html">Side Dish</a>
-                <a href="food-categories.html">Street Foods/Exotic</a>
-                <a href="food-categories.html">Dessert</a>
-                <a href="food-categories.html">Pasta/Noodles</a>
-                <a href="food-categories.html">Soup</a>
-              </div>
-            </div>
-            <a href="about_us.html">ABOUT US</a>
-          </li>
-        </ul>
-      </div>
-      <div class="user-but">
-        <a href="login.html">Log-in</a>
-        <a href="register.html">Register</a>
-      </div>
-    </nav>
+  <?php 
+    
+    session_start();
+    ob_start();
+  if(!isset($_SESSION['UserLogin'])){
+    include("nav-nuser.php");
+  }
+  else{
+    include("nav-user.php");}
+    ?>
     <hr />
     <!-- DESSERT SECTION-->
     <a href="food-categories.html"><i class="bx bx bx-chevron-left"></i></a>
@@ -189,5 +165,19 @@
       </div>
       <p>&copy; 2021 PHoodie All Rights Reserved.</p>
     </footer>
+    <!-- Javascript -->
+<script>
+  var dropdown = document.getElementById('mydropdown');
+  var avatar = document.getElementById('avatar'); 
+  avatar.onclick = () => {
+    dropdown.style.display = 'block';
+  }
+  
+  window.onclick = (event) => {
+    if(!event.target.matches('#avatar')){
+      dropdown.style.display = 'none';
+    }
+  }
+  </script>
   </body>
 </html>

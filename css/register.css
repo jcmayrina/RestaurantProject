@@ -7,10 +7,10 @@ body {
   background-color: #f1f1f1;
 }
 
-#logincontainer {
+#signincontainer {
   border: none;
-  width: 55%;
-  height: 70%;
+  width: 50%;
+  height: 67%;
   display: flex;
   box-shadow: 0 0 10px 2px #0505051a;
 }
@@ -43,7 +43,6 @@ body {
   text-decoration: none;
   color: #715846;
 }
-
 #phoodie {
   text-align: center;
   font-size: 3em;
@@ -51,7 +50,7 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-#logintext {
+#signintext {
   text-align: center;
 
   font-weight: bold;
@@ -87,28 +86,44 @@ input:focus {
 }
 
 input[type="password"] {
-  transition: ease-in-out 300ms;
   background-color: white;
 
   border-bottom: 1px solid #887969;
   border-top: none;
   border-right: none;
   border-left: none;
-  width: 350px;
-
   padding-left: 20px;
+  width: 350px;
 }
+input[type="re-enterpassword"] {
+  background-color: white;
 
+  border-bottom: 1px solid #887969;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  padding-left: 20px;
+  width: 350px;
+}
+input[type="email"] {
+  background-color: white;
+
+  border-bottom: 1px solid #887969;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  padding-left: 20px;
+  width: 350px;
+}
 input[type="text"] {
-  transition: ease-in-out 300ms;
   background-color: white;
 
   border-bottom: 1px solid#887969;
   border-top: none;
   border-right: none;
   border-left: none;
-  width: 350px;
   padding-left: 20px;
+  width: 350px;
 }
 
 #icon {
@@ -116,7 +131,7 @@ input[type="text"] {
   position: absolute;
 }
 
-.loginbutton {
+.signinbutton {
   text-decoration: none;
   background-color: #e09721;
   border-radius: 5px;
@@ -126,14 +141,9 @@ input[type="text"] {
   width: 30%;
 }
 
-.loginbutton:hover {
+.signinbutton:hover {
   opacity: 0.8;
   color: #887969;
-}
-
-#forgotpassword {
-  float: right;
-  font-size: 13px;
 }
 
 .buttondiv {

@@ -51,45 +51,20 @@
     <!-- Javascript -->
     <script src="./js/active_link.js"></script>
     <!-- CSS -->
+    <link rel="stylesheet" href="./css/user_accountDetails.css" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <nav class="top-nav">
-      <div class="logo">
-        <h1 class="header">PHoodie</h1>
-      </div>
-      <div class="search-cont">
-        <form>
-          <input type="text" name="search" placeholder="Search..." />
-          <button type="submit" class="subbut">
-            <i class="bx bx-search"></i>
-          </button>
-        </form>
-      </div>
-      <div class="navbutt">
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a href="index.html" class="active">HOME</a>
-            <div class="dropdown">
-              <a href="#MENU">MENU</a>
-              <div class="dropdown-content">
-                <a href="food-categories.html">Main Dish</a>
-                <a href="food-categories.html">Side Dish</a>
-                <a href="food-categories.html">Street Foods/Exotic</a>
-                <a href="food-categories.html">Dessert</a>
-                <a href="food-categories.html">Pasta/Noodles</a>
-                <a href="food-categories.html">Soup</a>
-              </div>
-            </div>
-            <a href="about_us.html">ABOUT US</a>
-          </li>
-        </ul>
-      </div>
-      <div class="user-but">
-        <a href="login.html">Log-in</a>
-        <a href="register.html">Register</a>
-      </div>
-    </nav>
+    <?php 
+    include_once("css/connections/recipe.php");
+    session_start();
+    ob_start();
+  if(!isset($_SESSION['UserLogin'])){
+    include("nav-nuser.php");
+  }
+  else{
+    include("nav-user.php");}
+    ?>
     <section class="carousel-img">
       <div
         id="FoodCarousel"
@@ -278,187 +253,16 @@
       <h1 class="header">LATEST POST</h1>
       <div class="post-wrapper">
         <div class="left">
-          <img src="images/burger.jpeg" alt="" />
-          <p>
-            Photo by
-            <a
-              href="https://unsplash.com/@omaha?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-              >Mike</a
-            >
-            on
-            <a
-              href="https://unsplash.com/s/photos/burger-fries?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-              >Unsplash</a
-            >
-          </p>
+          <img src="<?php echo "images/".$recipe['image']?>" alt="" />
         </div>
         <div class="right">
-          <div class="date">OCTOBER 15, 2021</div>
-          <div class="post-title">Burger with Fries</div>
+          <div class="date"><?php echo $recipe['upload_date']?></div>
+          <div class="post-title"><?php echo $recipe['title']?></div>
           <div class="post-cont">
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, ex
-            quam fugit exercitationem culpa consequuntur neque velit expedita
-            illo molestiae quas, laboriosam nihil, tempore quae? Cumque
-            similique ipsam iusto consequatur."
+          <?php echo $recipe['description']?>
           </div>
           <div class="post-link">
             <a href="#viewmore">VIEW MORE</a>
-          </div>
-        </div>
-      </div>
-      <div class="post-wrapper">
-        <div class="left">
-          <img src="images/pancake.jpg" alt="" />
-          <p>
-            Photo by
-            <a
-              href="https://www.wallpaperflare.com/pancakes-on-white-and-gray-plate-wallpaper-81095"
-              >Wallpaper Flare</a
-            >
-            on
-            <a href="https://www.wallpaperflare.com/">Wallpaper Flare</a>
-          </p>
-        </div>
-        <div class="right">
-          <div class="date">OCTOBER 13, 2021</div>
-          <div class="post-title">Pancake</div>
-          <div class="post-cont">
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, ex
-            quam fugit exercitationem culpa consequuntur neque velit expedita
-            illo molestiae quas, laboriosam nihil, tempore quae? Cumque
-            similique ipsam iusto consequatur."
-          </div>
-          <div class="post-link">
-            <a href="#viewmore">VIEW MORE</a>
-          </div>
-        </div>
-      </div>
-      <div class="post-wrapper">
-        <div class="left">
-          <img src="images/spaghetti.jpg" alt="" />
-          <p>
-            Photo by
-            <a href="https://foodal.com/author/meghanbassett/">Meghan Yager</a>
-            on
-            <a href="https://foodal.com/recipes/pasta/perfect-spaghetti/"
-              >Foodal</a
-            >
-          </p>
-        </div>
-        <div class="right">
-          <div class="date">OCTOBER 11, 2021</div>
-          <div class="post-title">Spaghetti</div>
-          <div class="post-cont">
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, ex
-            quam fugit exercitationem culpa consequuntur neque velit expedita
-            illo molestiae quas, laboriosam nihil, tempore quae? Cumque
-            similique ipsam iusto consequatur."
-          </div>
-          <div class="post-link">
-            <a href="#viewmore">VIEW MORE</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="review">
-      <h1 class="header">REVIEWS</h1>
-      <div class="review-wrapper">
-        <div class="row">
-          <div class="col-md-12">
-            <div
-              id="reviewCarousel"
-              class="carousel slide"
-              data-ride="carousel"
-              data-interval="4500"
-              data-pause="false"
-            >
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <div class="row">
-                    <div class="col-md-4">
-                      <div class="single-box">
-                        <div class="review-cont">
-                          "This is great! And there are lots of recipes that are
-                          easy to make!"
-                        </div>
-                        <div class="review-link">
-                          <a href="#userlink">@itssandracueto</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="single-box">
-                        <div class="review-cont">
-                          "I love how easy these recipes are."
-                        </div>
-                        <div class="review-link">
-                          <a href="#userlink">@shazam</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="single-box">
-                        <div class="review-cont">
-                          "Filipino dish are the best and easy to make!"
-                        </div>
-                        <div class="review-link">
-                          <a href="#userlink">@anggecuets</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="carousel-item">
-                  <div class="row">
-                    <div class="col-md-4">
-                      <div class="single-box">
-                        <div class="review-cont">
-                          "I love the Adobo recipe!"
-                        </div>
-                        <div class="review-link">
-                          <a href="#userlink">@ashefrayne</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="single-box">
-                        <div class="review-cont">
-                          "Learning new different cooking techniques."
-                        </div>
-                        <div class="review-link">
-                          <a href="#userlink">@vedaddy</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="single-box">
-                        <div class="review-cont">"I love food!"</div>
-                        <div class="review-link">
-                          <a href="#userlink">@jcmayrina</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <a
-                class="carousel-control-prev"
-                href="#reviewCarousel"
-                role="button"
-                data-slide="prev"
-              >
-                <i class="bx bx-chevron-left"></i>
-              </a>
-              <a
-                class="carousel-control-next"
-                href="#reviewCarousel"
-                role="button"
-                data-slide="next"
-              >
-                <i class="bx bx-chevron-right"></i>
-              </a>
-            </div>
           </div>
         </div>
       </div>
@@ -477,5 +281,19 @@
       </div>
       <p>&copy; 2021 PHoodie All Rights Reserved.</p>
     </footer>
+    <!-- Javascript -->
+<script>
+  var dropdown = document.getElementById('mydropdown');
+  var avatar = document.getElementById('avatar'); 
+  avatar.onclick = () => {
+    dropdown.style.display = 'block';
+  }
+  
+  window.onclick = (event) => {
+    if(!event.target.matches('#avatar')){
+      dropdown.style.display = 'none';
+    }
+  }
+  </script>
   </body>
 </html>
