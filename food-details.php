@@ -66,7 +66,7 @@
     ?>
     <hr />
     <!-- DESSERT SECTION-->
-    <a href="food-categories.html"><i class="bx bx bx-chevron-left"></i></a>
+    <a href="food-categories.php"><i class="bx bx bx-chevron-left"></i></a>
     <section class="dessert-img-info" alt="Sweet Taho">
       <div class="dessert-img">
         <img src="./images/taho.jpg" />

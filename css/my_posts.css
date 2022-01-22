@@ -27,6 +27,8 @@ body {
 .icon {
   height: 150px;
   width: 150px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 #username {
@@ -199,7 +201,6 @@ section {
 }
 
 .img-section img {
-  transform: scaleX(-1);
   height: 150px;
   width: 150px;
   border-radius: 50%;
@@ -255,4 +256,36 @@ section {
 .input-textbox:focus {
   outline: none;
   background-color: rgb(216, 155, 22);
+}
+@media only screen and (max-width: 1200px) {
+  /* <=1024px */
+  .content-container .content {
+    margin-left: 10px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  /* <=1024px */
+  #food_content {
+    font-size: 1em;
+  }
+  #image {
+    height: 120px;
+    width: 120px;
+  }
+  .content-container .content {
+    margin-left: 10px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  /* <=800px */
+  #food_content {
+    font-size: 0.9em;
+  }
+  #image {
+    height: 120px;
+    width: 120px;
+  }
+  .content-container .content {
+    margin-left: 10px;
+  }
 }

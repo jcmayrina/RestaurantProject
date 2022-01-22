@@ -56,7 +56,6 @@
   </head>
   <body>
     <?php 
-    include_once("css/connections/recipe.php");
     session_start();
     ob_start();
   if(!isset($_SESSION['UserLogin'])){
@@ -251,12 +250,21 @@
     </section>
     <section class="latest">
       <h1 class="header">LATEST POST</h1>
+      <?php 
+      include_once("css/connections/connections.php");
+      $con = connection();
+
+      $rec = "SELECT * FROM `recipe` ORDER BY recipeID DESC LIMIT 5;";
+      $user = $con->query($rec) or die ($con->error);
+      while($recipe = $user->fetch_assoc()){
+      ?>
       <div class="post-wrapper">
         <div class="left">
           <img src="<?php echo "images/".$recipe['image']?>" alt="" />
         </div>
         <div class="right">
-          <div class="date"><?php echo $recipe['upload_date']?></div>
+          <div class="date">
+            <?php echo $recipe['upload_date'];?></div>
           <div class="post-title"><?php echo $recipe['title']?></div>
           <div class="post-cont">
           <?php echo $recipe['description']?>
@@ -266,6 +274,9 @@
           </div>
         </div>
       </div>
+      <?php 
+      }
+      ?>
     </section>
     <footer>
       <div class="soc-link">

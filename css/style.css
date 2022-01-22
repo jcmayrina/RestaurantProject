@@ -17,7 +17,7 @@ gray:       #9d9b9a
   justify-content: space-around;
 }
 .logo .header {
-  color: #715846;
+  color: #e09721;
   font-family: "Noto Sans Mono", monospace;
   font-size: 35px;
 }
@@ -216,105 +216,6 @@ gray:       #9d9b9a
   font-family: "Andada Pro", serif;
   font-style: italic;
 }
-@media only screen and (max-width: 1920px) {
-  .card-wrapper {
-    width: 100%;
-  }
-  .overlay .content h4 .bx {
-    font-size: 35px;
-  }
-}
-@media only screen and (max-width: 1500px) {
-  .cards {
-    width: 30%;
-  }
-  .cards img {
-    height: 80%;
-  }
-  .overlay {
-    height: 80%;
-  }
-  .overlay .title h1 {
-    font-size: 2.5em;
-  }
-  .overlay .content h4 {
-    font-size: 20px;
-  }
-  .overlay .content h4 .bx {
-    font-size: 25px;
-  }
-}
-@media only screen and (max-width: 1000px) {
-  .cards {
-    width: 27%;
-  }
-  .cards img {
-    height: 60%;
-  }
-  .overlay {
-    height: 60%;
-  }
-  .overlay .title h1 {
-    font-size: 1.5em;
-  }
-  .overlay .content h4 {
-    font-size: 10px;
-  }
-  .overlay .content h4 .bx {
-    font-size: 15px;
-  }
-}
-@media only screen and (max-width: 600px) {
-  .cards {
-    width: 25%;
-  }
-  .cards img {
-    height: 40%;
-  }
-  .overlay {
-    height: 40%;
-  }
-  .overlay .content {
-    margin: 5px 10px 0 10px;
-  }
-  .overlay .title h1 {
-    font-size: 1em;
-  }
-  .overlay .content h4 {
-    font-size: 10px;
-  }
-  .overlay .content h4 .bx {
-    font-size: 10px;
-  }
-}
-@media only screen and (max-width: 500px) {
-  .popular .header {
-    font-size: 25px;
-  }
-  .cards {
-    width: 95%;
-    height: 50%;
-    margin: 5px 0 5px 0;
-  }
-  .cards img {
-    height: 50%;
-  }
-  .overlay {
-    height: 100%;
-  }
-  .overlay .content {
-    margin: 5px 20px 0 20px;
-  }
-  .overlay .title h1 {
-    font-size: 1.2em;
-  }
-  .overlay .content h4 {
-    font-size: 16px;
-  }
-  .overlay .content h4 .bx {
-    font-size: 16px;
-  }
-}
 /* LATEST POST SECTION */
 .latest {
   margin: 0 auto;
@@ -374,7 +275,7 @@ gray:       #9d9b9a
   margin-top: 5px;
   font-family: "Roboto", sans-serif;
   font-weight: 350;
-  min-width: 1100px;
+  min-width: 40vw;
 }
 .right .post-link {
   margin-top: 10px;
@@ -571,4 +472,234 @@ footer p {
   cursor: text;
   background-color: white;
   padding: 0 8px 0 8px;
+}
+.menu-overlay {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+}
+.menu-small {
+  position: fixed;
+  top: 85px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 998;
+  left: 0;
+  background: #e09721;
+  transform: translateX(-100%);
+  transition: 0.5s;
+}
+.menu-small .bot {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+}
+.menu-small .bot li {
+  font-weight: bolder;
+}
+.menu-small ul {
+  text-align: center;
+}
+.menu-small li {
+  font-size: 2.4rem;
+  list-style: none;
+}
+.menu-small li a {
+  text-decoration: none;
+  color: #fff;
+}
+.menu-small.active {
+  left: 0;
+  top: 85px;
+  transform: translateX(0);
+}
+.toggleIcon {
+  display: none;
+  position: fixed;
+  top: 30px;
+  right: 20px;
+  z-index: 999;
+}
+.drop-content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000;
+  left: 0;
+  background: #fff;
+  transform: translateX(-100%);
+  transition: 0.5s;
+}
+.drop-content a {
+  color: #e09721 !important;
+}
+.drop-content .top {
+  position: inherit;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.drop-content .top .header {
+  background: #e09721;
+  color: #fff;
+  padding: 25px 0 25px 0;
+  font-weight: bolder;
+}
+.drop-content .top .header .bx {
+  font-size: 1em;
+}
+.drop-content.active {
+  transform: translateX(0);
+}
+@media only screen and (max-width: 1920px) {
+  .card-wrapper {
+    width: 100%;
+  }
+  .overlay .content h4 .bx {
+    font-size: 35px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .cards {
+    width: 30%;
+  }
+  .cards img {
+    height: 80%;
+  }
+  .overlay {
+    height: 80%;
+  }
+  .overlay .title h1 {
+    font-size: 2.5em;
+  }
+  .overlay .content h4 {
+    font-size: 20px;
+  }
+  .overlay .content h4 .bx {
+    font-size: 25px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .cards {
+    width: 27%;
+  }
+  .cards img {
+    height: 60%;
+  }
+  .overlay {
+    height: 60%;
+  }
+  .overlay .title h1 {
+    font-size: 1.5em;
+  }
+  .overlay .content h4 {
+    font-size: 10px;
+  }
+  .overlay .content h4 .bx {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .cards {
+    width: 27%;
+  }
+  .cards img {
+    height: 60%;
+  }
+  .overlay {
+    height: 60%;
+  }
+  .overlay .title h1 {
+    font-size: 1.5em;
+  }
+  .overlay .content h4 {
+    font-size: 10px;
+  }
+  .overlay .content h4 .bx {
+    font-size: 15px;
+  }
+  .right .post-cont {
+    min-width: 20vw;
+  }
+  .carousel-img {
+    overflow: hidden;
+  }
+  .menu-overlay {
+    display: none;
+  }
+  .toggleIcon {
+    display: inline-block;
+  }
+  .toggleIcon .bx {
+    cursor: pointer;
+    font-size: 1.9em;
+    color: #e09721;
+  }
+  .toggleIcon.active .bx {
+    color: #e09721;
+    background: #fff;
+  }
+}
+@media only screen and (max-width: 760px) {
+  .cards {
+    width: 75%;
+    height: 30%;
+    margin: 5px 0 5px 0;
+  }
+  .cards img {
+    height: 30%;
+  }
+  .overlay {
+    height: 100%;
+  }
+  .overlay .content {
+    margin: 5px 20px 0 20px;
+  }
+  .overlay .title h1 {
+    font-size: 1.2em;
+  }
+  .overlay .content h4 {
+    font-size: 16px;
+  }
+  .overlay .content h4 .bx {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .popular .header {
+    font-size: 25px;
+  }
+  .cards {
+    width: 95%;
+    height: 50%;
+    margin: 5px 0 5px 0;
+  }
+  .cards img {
+    height: 50%;
+  }
+  .overlay {
+    height: 100%;
+  }
+  .overlay .content {
+    margin: 5px 20px 0 20px;
+  }
+  .overlay .title h1 {
+    font-size: 1.2em;
+  }
+  .overlay .content h4 {
+    font-size: 16px;
+  }
+  .overlay .content h4 .bx {
+    font-size: 16px;
+  }
 }

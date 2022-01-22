@@ -138,7 +138,8 @@ body {
   width: 50px;
   height: 50px;
 
-  border-radius: 50px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .user {
@@ -199,6 +200,10 @@ body {
   cursor: pointer;
 }
 
+#MyFaves,
+#MyAcc {
+  display: none;
+}
 /* Account*/
 
 .account-container label {
@@ -213,7 +218,7 @@ body {
 }
 
 .prof_container {
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
 }
@@ -233,6 +238,7 @@ body {
   width: 60%;
   height: 35%;
 
+  margin: 0 auto;
   box-shadow: rgba(10, 6, 6, 0.05) 0px 0px 0px 1px;
   object-fit: cover;
 }
@@ -248,7 +254,6 @@ body {
 }
 
 .img-section img {
-  transform: scaleX(-1);
   height: 150px;
   width: 150px;
   border-radius: 50%;

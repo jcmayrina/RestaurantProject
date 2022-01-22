@@ -8,3 +8,13 @@ function getImage(imagename) {
   var newimg = imagename.replace(/^.*\\/, "");
   $("#display-image").html(newimg);
 }
+function menuToggle() {
+  var nav = document.getElementById("menu-small");
+  nav.classList.toggle("active");
+  var nav = document.getElementById("toggleIcon");
+  nav.classList.toggle("active");
+}
+function menumenuToggle() {
+  var nav = document.getElementById("menu-menu");
+  nav.classList.toggle("active");
+}

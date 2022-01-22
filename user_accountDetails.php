@@ -1,7 +1,162 @@
 <?php 
-
 session_start();
-ob_start();;
+ob_start();
+
+include_once("css/connections/connections.php");
+$con = connection();
+
+if(isset($_POST['submitnewtUser']))
+{
+    $id = (int) $_SESSION['UserID'];
+    $username = $_POST['username'];
+    $query = "UPDATE `user` SET `username`='$username' WHERE userID='$id' ";
+
+    $query_run = mysqli_query($con, $query);
+
+    if($query_run)
+    {
+      echo '<script> alert("DATA UPDATED"); </script>';
+
+        //$_SESSION['status'] = "Data Updated Successfully";
+        $sql = "SELECT * FROM `user` WHERE username = '$username'";
+        $user = $con->query($sql) or die ($con->error);
+        $row = $user->fetch_assoc();
+        $total = $user->num_rows;
+
+    if ($total > 0){
+        $_SESSION['UserLogin'] = $row['username'];
+        $_SESSION['UserEmail'] = $row['email'];
+        $_SESSION['UserPass'] = $row['password'];
+        $_SESSION['UserID'] = $row['userID'];
+        $_SESSION['UserImg'] = $row['profilepic'];
+       // header("Location: index.php");
+    } 
+    }
+    else
+    {
+      echo '<script> alert("DATA NOT UPDATED"); </script>';
+       // $_SESSION['status'] = "Not Updated";
+    }
+}
+
+if(isset($_POST['submitnewEmail']))
+{
+ 
+    $id = (int) $_SESSION['UserID'];
+    $email = $_POST['email'];
+    $query = "UPDATE `user` SET `email`='$email' WHERE userID='$id' ";
+
+    $query_run = mysqli_query($con, $query);
+
+    if($query_run)
+    {
+      echo '<script> alert("DATA UPDATED"); </script>';
+
+        //$_SESSION['status'] = "Data Updated Successfully";
+        $sql = "SELECT * FROM `user` WHERE email = '$email'";
+        $user = $con->query($sql) or die ($con->error);
+        $row = $user->fetch_assoc();
+        $total = $user->num_rows;
+
+    if ($total > 0){
+        $_SESSION['UserLogin'] = $row['username'];
+        $_SESSION['UserEmail'] = $row['email'];
+        $_SESSION['UserPass'] = $row['password'];
+        $_SESSION['UserID'] = $row['userID'];
+        $_SESSION['UserImg'] = $row['profilepic'];
+       // header("Location: index.php");
+    } 
+    }
+    else
+    {
+      echo '<script> alert("DATA NOT UPDATED"); </script>';
+       // $_SESSION['status'] = "Not Updated";
+       // header("Location: index.php");
+    }
+
+  }
+
+  if(isset($_POST['submitnewPass']))
+{
+ 
+    $id = (int) $_SESSION['UserID'];
+    $password = $_POST['password'];
+    $query = "UPDATE `user` SET `password`='$password' WHERE userID='$id' ";
+
+    
+    $query_run = mysqli_query($con, $query);
+
+    if($query_run)
+    {
+      echo '<script> alert("DATA UPDATED"); </script>';
+
+        //$_SESSION['status'] = "Data Updated Successfully";
+        $sql = "SELECT * FROM `user` WHERE password = '$password'";
+        $user = $con->query($sql) or die ($con->error);
+        $row = $user->fetch_assoc();
+        $total = $user->num_rows;
+
+    if ($total > 0){
+        $_SESSION['UserLogin'] = $row['username'];
+        $_SESSION['UserEmail'] = $row['email'];
+        $_SESSION['UserPass'] = $row['password'];
+        $_SESSION['UserID'] = $row['userID'];
+        $_SESSION['UserImg'] = $row['profilepic'];
+       // header("Location: index.php");
+    } 
+    }
+    else
+    {
+      echo '<script> alert("DATA NOT UPDATED"); </script>';
+       // $_SESSION['status'] = "Not Updated";
+       // header("Location: index.php");
+    }
+
+  }
+
+  if(isset($_POST['uploadImage']))
+{
+ 
+    $id = (int) $_SESSION['UserID'];
+    $image = $_FILES['fileUpload']['name'];
+    $query = "UPDATE `user` SET `profilepic`='$image' WHERE userID='$id' ";
+    
+    $upload_folder = "images/";
+    $file_location = $upload_folder . basename($_FILES["fileUpload"]["name"]);
+    if(isset($_FILES['fileUpload'])){ 
+      move_uploaded_file($_FILES['fileUpload']['tmp_name'], $file_location);
+   } 
+    
+    $query_run = mysqli_query($con, $query);
+
+    if($query_run)
+    {
+      echo '<script> alert("DATA UPDATED"); </script>';
+
+        //$_SESSION['status'] = "Data Updated Successfully";
+        $sql = "SELECT * FROM `user` WHERE profilepic = '$image'";
+        $user = $con->query($sql) or die ($con->error);
+        $row = $user->fetch_assoc();
+        $total = $user->num_rows;
+
+    if ($total > 0){
+        $_SESSION['UserLogin'] = $row['username'];
+        $_SESSION['UserEmail'] = $row['email'];
+        $_SESSION['UserPass'] = $row['password'];
+        $_SESSION['UserID'] = $row['userID'];
+        $_SESSION['UserImg'] = $row['profilepic'];
+       // header("Location: index.php");
+    } 
+    }
+    else
+    {
+      echo '<script> alert("DATA NOT UPDATED"); </script>';
+       // $_SESSION['status'] = "Not Updated";
+       // header("Location: index.php");
+    }
+
+  }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -59,10 +214,11 @@ ob_start();;
       ?>
     <div class="container-head">
       <div class="header-content">
-        <img class="icon" src="<?php echo "./images/".$_SESSION['UserImg']?>" alt="">
+        <img class="icon" src="<?php echo "/images/".$_SESSION['UserImg'];?>" alt="">
         <h1 id="username">@<?php echo $_SESSION['UserLogin'];?></h1>
       </div>
     </div>
+  
   
 
     
@@ -84,11 +240,11 @@ ob_start();;
       <h1>You don't have any posts yet.</h1>
     </div>
     </section>-->
-    
+
     <section  style="margin-top: 50px;">
       <div id="MyPosts" class="container">
         <div class="content-container">
-          <img id="image" src="/images/F1.png" alt="">
+          <img id="image" src="/images/A.png" alt="">
           <div class="content">
             <h1 id="date">January 17, 2020</h1>
             <h1 id="food_title">CHICKEN SPICY ADOBO</h1>
@@ -124,10 +280,10 @@ ob_start();;
     </section>
 
     <section  class="account-container">
-      <div id="MyAcc" class="prof_container">
+      <div id="MyAcc" class="prof_container" >
           <div class="profile_section">
               <div class="img-section">
-                <img src="<?php echo "./images/".$_SESSION['UserImg']?>">
+                <img src="<?php echo "images/".$_SESSION['UserImg'];?>">
                 <form method="post" enctype="multipart/form-data">
                 <input type="file" name="fileUpload" id="fileImg"  >
                 <span>
@@ -136,21 +292,21 @@ ob_start();;
                 </form>
               </div>
             
-            
+
             <div class="input-section">
               <table class="input-content">
                 <tr>
                   <form method="post">
                    <td class="col-1"><label>Username:</label></td>
                    <td class="col-2"><input class="input-textbox" type="text" name="username" id="username" value="<?php echo $_SESSION['UserLogin'];?>"  /></td>
-                   <td class="col-3"><button name="subminewtUser"><i class='bx bxs-edit-alt edit_username'></i></td>
+                   <td class="col-3"><button name="submitnewtUser"><i class='bx bxs-edit-alt edit_username'></i></td>
                   </form>
                 </tr>
                
                 <tr>
                   <form method="post">
                     <td class="col-1"><label>Email:</label></td>
-                    <td class="col-2"><input class="input-textbox" type="email" name="email" id="email" value="<?php echo $_SESSION['UserEmail'];?>"  /></td>
+                    <td class="col-2"><input class="input-textbox" type="email" name="email" id="email" value="<?php echo $_SESSION['UserEmail']; ?>"  /></td>
                     <td class="col-3"><button name="submitnewEmail"><i class='bx bxs-edit-alt edit_email'></i></button></td>
                   </form>
                 </tr>
@@ -168,6 +324,8 @@ ob_start();;
           </div>
       </div>
     </section>
+
+    
 
     
 </body>

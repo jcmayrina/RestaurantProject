@@ -11,14 +11,7 @@
       <div class="logo">
         <h1 class="header">PHoodie</h1>
       </div>
-      <div class="search-cont">
-        <form>
-          <input type="text" name="search" placeholder="Search..." />
-          <button type="submit" class="subbut">
-            <i class="bx bx-search"></i>
-          </button>
-        </form>
-      </div>
+      <div class="toggleIcon"><i class='bx bx-menu'></i></div>
       <div class="navbutt">
         <ul class="nav-list">
           <li class="nav-item">
@@ -76,7 +69,7 @@
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
-                  <form action="" method="post" class="form">
+                  <form method="post" class="form" enctype="multipart/form-data">
                   <fieldset class="modal-body text-center">
                     <fieldset class="topupload">
                       
@@ -99,7 +92,7 @@
                         ></label>
                         <input
                           type="file"
-                          name="imageupl"
+                          name="fileUpload"
                           id="imageupl"
                           style="display: none; visibility: none"
                           onchange="getImage(this.value);"
@@ -217,8 +210,11 @@
                   <?php 
                             
                     if(isset($_POST['submit'])){
-
-                        if(!empty($_POST['title']) && !empty($_POST['videolink']) && !empty($_POST['categ']) && !empty($_POST['description']) && !empty($_POST['recipe']) && !empty($_POST['ingredients']) && !empty($_POST['imageupl'])){
+                        
+                        if(!empty($_POST['title']) && !empty($_POST['videolink']) && !empty($_POST['categ']) && !empty($_POST['description']) && !empty($_POST['recipe']) && !empty($_POST['ingredients'])){
+                            $upload_folder = "images/";
+                            $file_location = $upload_folder . basename($_FILES['fileUpload']['name']);
+                            move_uploaded_file($_FILES['fileUpload']['tmp_name'], $file_location);
 
                             $title = $_POST['title'];
                             $videolink = $_POST['videolink'];
@@ -226,12 +222,11 @@
                             $description = $_POST['description'];
                             $recipe = $_POST['recipe'];
                             $ingredients = $_POST['ingredients'];
-                            $imageupl = $_POST['imageupl'];
+                            $imageupl = $_FILES['fileUpload']['name'];
                             $userID = $_SESSION['UserID'];
-
-                            $sql="INSERT INTO `recipe`(`title`, `recipeID`, `videolink`, `category`, `description`, `procedures`, `ingredients`, `upload_date`, `image`, `userID`) VALUES ('$title',NULL,'$videolink','$categ','$description','$recipe','$ingredients',NOW(),'$imageupl','$userID')";
+                            $date = date("F j, Y");
+                            $sql="INSERT INTO `recipe`(`title`, `recipeID`, `videolink`, `category`, `description`, `procedures`, `ingredients`, `upload_date`, `image`, `userID`) VALUES ('$title',NULL,'$videolink','$categ','$description','$recipe','$ingredients','$date','$imageupl','$userID')";
                             $con->query($sql) or die ($con->error);
-                             echo "success";
 
                         }
                     };
